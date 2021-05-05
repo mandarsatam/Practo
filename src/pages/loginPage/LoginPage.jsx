@@ -52,7 +52,7 @@ const LoginPage = () => {
                                     placeholder = "Email ID"
                                     value = {email}
                                     onChange = {(e) => setEmail(e.target.value)}
-                                    required
+                                    disabled
                                 />
                             </div>
                             <div>
@@ -65,7 +65,7 @@ const LoginPage = () => {
                                     placeholder = "Password"
                                     value = {password}
                                     onChange = {(e) => setPassword(e.target.value)}
-                                    required
+                                    disabled
                                 />
                             </div>
                             <div>
