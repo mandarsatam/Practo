@@ -1,7 +1,12 @@
 import { LOGIN_ERROR_HANDLING, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_USER } from "./actionType"
 
-const currentUser = JSON.parse(localStorage.getItem('currentUser'))
-const isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'))
+let currentUser, isLoggedIn;
+if(typeof(localStorage.getItem('currentUser')) !== 'undefined'){
+    currentUser = JSON.parse(localStorage.getItem('currentUser'))
+};
+if(typeof(localStorage.getItem('isLoggedIn')) !== 'undefined'){
+    isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'))
+};
 
 const initState = {
     currentUser : currentUser === null ? {} : currentUser,
